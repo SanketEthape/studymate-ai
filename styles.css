@@ -1,0 +1,235 @@
+
+/* ==========================================
+   StudyMate AI - Professional UI Theme
+   ========================================== */
+
+:root {
+    --sm-primary: #5267e8;
+    --sm-primary-dark: #3d4fc4;
+    --sm-accent: #8b5cf6;
+    --sm-text: #18233c;
+    --sm-muted: #66738c;
+    --sm-border: #e4e9f3;
+    --sm-surface: #ffffff;
+    --sm-background: #f5f7fc;
+}
+
+/* Application background */
+.stApp {
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(82, 103, 232, 0.09),
+            transparent 38%
+        ),
+        var(--sm-background);
+    color: var(--sm-text);
+}
+
+/* Main content */
+section.main > div.block-container {
+    max-width: 1440px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Headings */
+h1 {
+    color: var(--sm-text);
+    font-weight: 800 !important;
+    letter-spacing: -0.7px;
+}
+
+h2, h3 {
+    color: var(--sm-text);
+    font-weight: 700 !important;
+}
+
+/* Text */
+p, label, .stMarkdown {
+    line-height: 1.7;
+}
+
+[data-testid="stCaptionContainer"] {
+    color: var(--sm-muted);
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #172342 0%,
+        #202f55 60%,
+        #263765 100%
+    );
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-testid="stSidebar"] * {
+    color: #f4f6ff;
+}
+
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] {
+    color: #c2cbea;
+}
+
+/* Sidebar navigation */
+[data-testid="stSidebar"] div[role="radiogroup"] {
+    gap: 7px;
+}
+
+[data-testid="stSidebar"] div[role="radiogroup"] label {
+    border-radius: 10px;
+    padding: 9px 10px;
+    transition: background 0.2s ease;
+}
+
+[data-testid="stSidebar"] div[role="radiogroup"] label:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+/* Dashboard metric cards */
+[data-testid="stMetric"] {
+    background: var(--sm-surface);
+    border: 1px solid var(--sm-border);
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: 0 5px 18px rgba(29, 45, 85, 0.045);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--sm-muted);
+    font-weight: 600;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--sm-primary);
+    font-weight: 800;
+}
+
+/* Buttons */
+.stButton > button,
+[data-testid="stFormSubmitButton"] > button {
+    border-radius: 11px;
+    min-height: 44px;
+    font-weight: 650;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.stButton > button[kind="primary"],
+[data-testid="stFormSubmitButton"] > button[kind="primary"] {
+    background: linear-gradient(
+        100deg,
+        var(--sm-primary),
+        var(--sm-accent)
+    );
+    color: white;
+    border: none;
+    box-shadow: 0 5px 13px rgba(82, 103, 232, 0.18);
+}
+
+.stButton > button:hover,
+[data-testid="stFormSubmitButton"] > button:hover {
+    transform: translateY(-1px);
+    border-color: var(--sm-primary);
+    box-shadow: 0 5px 14px rgba(29, 45, 85, 0.10);
+}
+
+/* Text inputs */
+.stTextInput input,
+.stTextArea textarea,
+.stNumberInput input {
+    border-radius: 10px;
+    border-color: #d9e0ef;
+    background: #ffffff;
+}
+
+/* Dropdowns */
+[data-baseweb="select"] > div {
+    border-radius: 10px;
+    border-color: #d9e0ef;
+}
+
+/* Forms */
+[data-testid="stForm"] {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid var(--sm-border);
+    border-radius: 16px;
+    padding: 22px;
+}
+
+/* Expanders */
+[data-testid="stExpander"] {
+    background: var(--sm-surface);
+    border: 1px solid var(--sm-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* PDF uploader */
+[data-testid="stFileUploader"] {
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px dashed #aab8df;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+/* Chat messages */
+[data-testid="stChatMessage"] {
+    background: var(--sm-surface);
+    border: 1px solid var(--sm-border);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+}
+
+/* Chat input */
+[data-testid="stChatInput"] {
+    border-radius: 14px;
+}
+
+/* Progress bar */
+[data-testid="stProgressBar"] > div > div {
+    background: linear-gradient(
+        90deg,
+        var(--sm-primary),
+        var(--sm-accent)
+    );
+}
+
+/* Alerts */
+[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+/* Separators */
+hr {
+    border-color: var(--sm-border);
+    opacity: 0.8;
+}
+
+/* Links */
+a {
+    color: var(--sm-primary);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    section.main > div.block-container {
+        padding: 1.1rem 1rem 2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 14px;
+    }
+
+    [data-testid="stForm"] {
+        padding: 14px;
+    }
+}
